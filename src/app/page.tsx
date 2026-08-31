@@ -51,7 +51,7 @@ export default function Home() {
       </section>
 
       {/* El mes en breve */}
-      <section className="relative w-full overflow-hidden">
+      <section className="relative mb-24 w-full overflow-hidden md:mb-40">
         <Image
           src="/images/mes-en-breve-bg.jpg"
           alt=""
