@@ -13,9 +13,9 @@ export default function Home() {
   return (
     <main className="flex flex-col">
       {/* Hero */}
-      <section className="relative flex min-h-[80vh] w-full items-end overflow-hidden md:min-h-screen">
+      <section className="relative flex min-h-[80vh] w-full items-center overflow-hidden md:min-h-screen">
         <HeroBackground src="/images/hero-bg.jpg" />
-        <div className="relative z-10 flex flex-col gap-6 px-6 pb-16 md:px-16 md:pb-24 lg:px-32">
+        <div className="relative z-10 flex flex-col gap-6 px-6 md:px-16 lg:px-32">
           <div>
             <p className="font-serif text-4xl leading-tight font-light italic md:text-[64px] md:leading-[64px]">
               Agosto 2026
