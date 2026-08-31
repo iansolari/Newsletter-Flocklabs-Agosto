@@ -247,16 +247,14 @@ export default function Home() {
               "La propuesta busca utilizar Computer Vision para registrar y medir automáticamente los ciclos de trabajo. La información obtenida podría utilizarse en estudios de procesos y planificación productiva.",
             ]}
           />
-          <div className="md:col-span-2">
-            <AccentTextBlock
-              category="Experiencias Inmersivas"
-              title="Clones digitales fotorrealistas"
-              paragraphs={[
-                "La iniciativa propone crear representaciones digitales de personas mediante técnicas de fotogrametría.",
-                "Estos modelos podrían utilizarse en experiencias educativas, actividades de entretenimiento y entornos virtuales. La investigación también evaluaría cómo simplificar el proceso para personas sin conocimientos técnicos especializados.",
-              ]}
-            />
-          </div>
+          <AccentTextBlock
+            category="Experiencias Inmersivas"
+            title="Clones digitales fotorrealistas"
+            paragraphs={[
+              "La iniciativa propone crear representaciones digitales de personas mediante técnicas de fotogrametría.",
+              "Estos modelos podrían utilizarse en experiencias educativas, actividades de entretenimiento y entornos virtuales. La investigación también evaluaría cómo simplificar el proceso para personas sin conocimientos técnicos especializados.",
+            ]}
+          />
         </div>
       </section>
 
