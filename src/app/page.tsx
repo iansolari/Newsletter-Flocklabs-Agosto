@@ -5,6 +5,7 @@ import { NumberedHighlight } from "@/components/newsletter/NumberedHighlight";
 import { StoryBanner } from "@/components/newsletter/StoryBanner";
 import { InitiativeCard } from "@/components/newsletter/InitiativeCard";
 import { CommercialEntry } from "@/components/newsletter/CommercialEntry";
+import { HeroShaderBackground } from "@/components/newsletter/HeroShaderBackground";
 
 const SECTION = "px-6 py-20 md:px-16 md:py-32 lg:px-32";
 
@@ -13,14 +14,7 @@ export default function Home() {
     <main className="flex flex-col">
       {/* Hero */}
       <section className="relative flex min-h-[80vh] w-full items-end overflow-hidden md:min-h-screen">
-        <Image
-          src="/images/shader-1930-21-3.png"
-          alt=""
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover object-bottom"
-        />
+        <HeroShaderBackground />
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-black/10" />
         <div className="relative z-10 flex flex-col gap-6 px-6 pb-16 md:px-16 md:pb-24 lg:px-32">
           <div>
