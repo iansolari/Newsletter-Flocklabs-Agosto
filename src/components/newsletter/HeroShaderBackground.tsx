@@ -74,7 +74,11 @@ const FALLBACK_IMAGE = "/images/shader-1930-21-3.png";
 export function HeroShaderBackground() {
   const containerRef = useRef<HTMLDivElement>(null);
   const [opacity, setOpacity] = useState(1);
-  const [unsupported, setUnsupported] = useState(false);
+  // "checking" renders the static fallback so there's no blank/black flash
+  // while we probe WebGPU; "ready" mounts the live shader; "unsupported"
+  // stays on the fallback for good.
+  const [status, setStatus] = useState<"checking" | "ready" | "unsupported">("checking");
+  const unsupported = status !== "ready";
 
   useEffect(() => {
     const el = containerRef.current;
@@ -95,6 +99,61 @@ export function HeroShaderBackground() {
     };
   }, []);
 
+  // `"gpu" in navigator` only means the API exists, not that a GPU adapter
+  // and device can actually be created (older drivers, disabled flags,
+  // virtualized environments, some sandboxed browsers). Probe for a real
+  // adapter/device before ever mounting the composition, mirroring what the
+  // renderer does internally, so unsupported environments never try.
+  useEffect(() => {
+    let cancelled = false;
+    async function probe() {
+      try {
+        const gpu = (navigator as Navigator & { gpu?: unknown }).gpu as
+          | { requestAdapter: () => Promise<{ requestDevice: () => Promise<{ destroy: () => void } | null> } | null> }
+          | undefined;
+        if (!gpu) throw new Error("WebGPU not available");
+        const adapter = await gpu.requestAdapter();
+        if (!adapter) throw new Error("No WebGPU adapter");
+        // Only probe that a device *can* be created, then release it right
+        // away — holding onto it would compete with the real device the
+        // renderer creates next and can trigger spurious device-lost errors.
+        const device = await adapter.requestDevice();
+        if (!device) throw new Error("No WebGPU device");
+        device.destroy();
+        if (!cancelled) setStatus("ready");
+      } catch {
+        if (!cancelled) setStatus("unsupported");
+      }
+    }
+    void probe();
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
+  // Defense in depth: if the probe above succeeds but the runtime still
+  // fails during actual init (real-world flakiness), three.js's internal
+  // WebGL2 fallback can throw an unhandled rejection that never reaches
+  // `onRuntimeError`. Catch it here so we still recover instead of showing
+  // a crash overlay and a black hero.
+  useEffect(() => {
+    const handleRejection = (event: PromiseRejectionEvent) => {
+      const reason = event.reason;
+      const message = reason instanceof Error ? reason.message : String(reason);
+      const stack = reason instanceof Error ? (reason.stack ?? "") : "";
+      const looksLikeShaderLabFailure =
+        message.includes("getSupportedExtensions") ||
+        stack.includes("three_webgpu") ||
+        stack.includes("shader-lab");
+      if (looksLikeShaderLabFailure) {
+        event.preventDefault();
+        setStatus("unsupported");
+      }
+    };
+    window.addEventListener("unhandledrejection", handleRejection);
+    return () => window.removeEventListener("unhandledrejection", handleRejection);
+  }, []);
+
   return (
     <div
       ref={containerRef}
@@ -113,7 +172,9 @@ export function HeroShaderBackground() {
       ) : (
         <ShaderLabComposition
           config={config}
-          onRuntimeError={(message) => setUnsupported(Boolean(message))}
+          onRuntimeError={(message) => {
+            if (message) setStatus("unsupported");
+          }}
           style={{ width: "100%", height: "100%" }}
         />
       )}
