@@ -52,8 +52,13 @@ export function VerticalFeature({
       >
         <div className="flex gap-4">
           {accent && (
-            <div className="relative w-[50px] shrink-0 self-stretch">
-              <Image src={accent} alt="" fill sizes="50px" className="object-cover" />
+            <div
+              className="relative w-[70px] shrink-0 self-stretch overflow-hidden"
+              style={{ containerType: "size" }}
+            >
+              <div className="absolute top-1/2 left-1/2 h-[70px] w-[100cqh] -translate-x-1/2 -translate-y-1/2 rotate-90">
+                <Image src={accent} alt="" fill sizes="70px" className="object-cover" />
+              </div>
             </div>
           )}
           <div className="flex flex-col gap-3">
