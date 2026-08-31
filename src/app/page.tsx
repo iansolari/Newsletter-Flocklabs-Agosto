@@ -3,6 +3,7 @@ import { SectionTitle } from "@/components/newsletter/SectionTitle";
 import { StatItem } from "@/components/newsletter/StatItem";
 import { NumberedHighlight } from "@/components/newsletter/NumberedHighlight";
 import { StoryBanner } from "@/components/newsletter/StoryBanner";
+import { VerticalFeature } from "@/components/newsletter/VerticalFeature";
 import { InitiativeCard } from "@/components/newsletter/InitiativeCard";
 import { CommercialEntry } from "@/components/newsletter/CommercialEntry";
 import { HeroBackground } from "@/components/newsletter/HeroBackground";
@@ -147,19 +148,20 @@ export default function Home() {
             </p>
           </div>
         </div>
-        <div className="flex flex-col gap-10">
-          <StoryBanner
+        <div className="flex flex-col gap-16">
+          <VerticalFeature
             image="/images/print-halftone2-1.jpg"
             imageAlt="Avatar con Unreal Engine"
             category="Experiencias Inmersivas"
             title="Avatar con Unreal Engine"
+            reverse
             paragraphs={[
               "Esta iniciativa evaluó la posibilidad de desarrollar una alternativa propia para crear avatares conversacionales con Unreal Engine y MetaHuman.",
               "La investigación surgió por las limitaciones de Simli, la herramienta externa utilizada hasta el momento. Su dependencia implicaba costos recurrentes y reducía las posibilidades de personalización, integración y control técnico.",
               "El objetivo fue conocer si una solución propia podía ofrecer mayor control sobre el avatar y facilitar su uso en diferentes experiencias desarrolladas por el equipo.",
             ]}
           />
-          <StoryBanner
+          <VerticalFeature
             image="/images/print-halftone-2.jpg"
             imageAlt="Navegación simulada de cuadrúpedo"
             category="Robótica"
@@ -221,7 +223,7 @@ export default function Home() {
             ]}
           />
           <InitiativeCard
-            accent="/images/shader-1930-21-5.jpg"
+            accent="/images/shader-1930-02-2.jpg"
             category="Computer Vision"
             title="Medición de ciclos productivos"
             paragraphs={[
