@@ -25,7 +25,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="es"
-      className={`${poppins.variable} ${newsreader.variable} h-full snap-y snap-proximity antialiased`}
+      className={`${poppins.variable} ${newsreader.variable} h-full antialiased`}
     >
       <body className="min-h-full bg-black text-white">{children}</body>
     </html>
