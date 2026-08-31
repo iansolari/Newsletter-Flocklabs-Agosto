@@ -5,7 +5,7 @@ import { NumberedHighlight } from "@/components/newsletter/NumberedHighlight";
 import { StoryBanner } from "@/components/newsletter/StoryBanner";
 import { InitiativeCard } from "@/components/newsletter/InitiativeCard";
 import { CommercialEntry } from "@/components/newsletter/CommercialEntry";
-import { HeroShaderBackground } from "@/components/newsletter/HeroShaderBackground";
+import { HeroBackground } from "@/components/newsletter/HeroBackground";
 
 const SECTION = "px-6 py-20 md:px-16 md:py-32 lg:px-32";
 
@@ -13,10 +13,9 @@ export default function Home() {
   return (
     <main className="flex flex-col">
       {/* Hero */}
-      <section className="relative flex min-h-[80vh] w-full items-center justify-center overflow-hidden md:min-h-screen">
-        <HeroShaderBackground />
-        <div className="absolute inset-0 bg-black/35" />
-        <div className="relative z-10 flex flex-col items-center gap-6 px-6 text-center md:px-16">
+      <section className="relative flex min-h-[80vh] w-full items-end overflow-hidden md:min-h-screen">
+        <HeroBackground src="/images/shader-1930-21-3.png" />
+        <div className="relative z-10 flex flex-col gap-6 px-6 pb-16 md:px-16 md:pb-24 lg:px-32">
           <div>
             <p className="font-serif text-4xl leading-tight font-light italic md:text-[64px] md:leading-[64px]">
               Agosto 2026
