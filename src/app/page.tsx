@@ -133,8 +133,8 @@ export default function Home() {
       </section>
 
       {/* Iniciativas finalizadas */}
-      <section className={`${SECTION} flex flex-col gap-16`}>
-        <div className="flex flex-col gap-6 md:max-w-xl">
+      <section className="flex flex-col gap-16 py-20 md:py-32">
+        <div className="flex flex-col gap-6 px-6 md:max-w-xl md:px-16 lg:px-32">
           <SectionTitle lead="Iniciativas" italic="finalizadas" />
           <div className="flex flex-col gap-4 text-base leading-[20px] text-white/90">
             <p>
@@ -150,7 +150,7 @@ export default function Home() {
         </div>
         <div className="flex flex-col gap-16">
           <VerticalFeature
-            image="/images/print-halftone2-1.jpg"
+            image="/images/print-halftone-2.jpg"
             imageAlt="Avatar con Unreal Engine"
             category="Experiencias Inmersivas"
             title="Avatar con Unreal Engine"
@@ -162,7 +162,7 @@ export default function Home() {
             ]}
           />
           <VerticalFeature
-            image="/images/print-halftone-2.jpg"
+            image="/images/print-halftone2-1.jpg"
             imageAlt="Navegación simulada de cuadrúpedo"
             category="Robótica"
             title="Navegación simulada de cuadrúpedo"
