@@ -2,9 +2,8 @@ import Image from "next/image";
 import { SectionTitle } from "@/components/newsletter/SectionTitle";
 import { StatItem } from "@/components/newsletter/StatItem";
 import { NumberedHighlight } from "@/components/newsletter/NumberedHighlight";
-import { StoryBanner } from "@/components/newsletter/StoryBanner";
 import { VerticalFeature } from "@/components/newsletter/VerticalFeature";
-import { InitiativeCard } from "@/components/newsletter/InitiativeCard";
+import { AccentTextBlock } from "@/components/newsletter/AccentTextBlock";
 import { CommercialEntry } from "@/components/newsletter/CommercialEntry";
 import { HeroBackground } from "@/components/newsletter/HeroBackground";
 
@@ -176,27 +175,39 @@ export default function Home() {
       </section>
 
       {/* Compartimos lo aprendido */}
-      <section className={`${SECTION} flex flex-col gap-10`}>
-        <SectionTitle lead="Compartimos" italic="lo aprendido" />
-        <StoryBanner
-          image="/images/compartimos-bg.jpg"
-          imageAlt="Cierre de la POC de mapas de calor"
-          category="Transferencia de conocimiento · Computer Vision"
-          title="Cierre de la POC de mapas de calor"
-          paragraphs={[
-            "Como parte del cierre de su prueba de concepto sobre mapas de calor, Luisi realizará una capacitación interna para compartir el trabajo con el resto del equipo.",
-            "Aunque la actividad está prevista para la semana siguiente, se incluye en esta edición porque forma parte del cierre de la iniciativa desarrollada durante agosto.",
-            "La capacitación presentará el problema investigado, el trabajo realizado y los principales aprendizajes de la prueba de concepto.",
-          ]}
+      <section className="relative w-full overflow-hidden">
+        <Image
+          src="/images/compartimos-bg.jpg"
+          alt=""
+          fill
+          sizes="100vw"
+          className="object-cover"
         />
+        <div className="absolute inset-0 bg-black/55" />
+        <div
+          className={`relative z-10 ${SECTION} flex flex-col gap-16 md:flex-row md:items-center md:justify-between`}
+        >
+          <SectionTitle lead="Compartimos" italic="lo aprendido" />
+          <div className="md:max-w-xl">
+            <AccentTextBlock
+              category="Computer Vision"
+              label="Transferencia de conocimiento · Computer Vision"
+              title="Cierre de la POC de mapas de calor"
+              paragraphs={[
+                "Como parte del cierre de su prueba de concepto sobre mapas de calor, Luisi realizará una capacitación interna para compartir el trabajo con el resto del equipo.",
+                "Aunque la actividad está prevista para la semana siguiente, se incluye en esta edición porque forma parte del cierre de la iniciativa desarrollada durante agosto.",
+                "La capacitación presentará el problema investigado, el trabajo realizado y los principales aprendizajes de la prueba de concepto.",
+              ]}
+            />
+          </div>
+        </div>
       </section>
 
       {/* Nuevas iniciativas */}
       <section className={`${SECTION} flex flex-col gap-16`}>
         <SectionTitle lead="Nuevas" italic="iniciativas" />
         <div className="grid grid-cols-1 gap-x-12 gap-y-16 md:grid-cols-2">
-          <InitiativeCard
-            accent="/images/shader-1930-21-5.jpg"
+          <AccentTextBlock
             category="Robótica"
             title="Robótica aérea con UAV"
             paragraphs={[
@@ -204,8 +215,7 @@ export default function Home() {
               "El objetivo es evaluar su aplicación en inspecciones de zonas de difícil acceso y analizar cómo podrían complementar las capacidades actuales del robot cuadrúpedo Go2 EDU.",
             ]}
           />
-          <InitiativeCard
-            accent="/images/shader-1929-37-2.jpg"
+          <AccentTextBlock
             category="Agentes"
             title="Pipeline de IA para Expo Industrial"
             paragraphs={[
@@ -213,8 +223,7 @@ export default function Home() {
               "A partir del registro mediante un código QR, el sistema obtendría información sobre el visitante, su empresa y sus intereses. Luego utilizaría inteligencia artificial para generar una recomendación relacionada con sus necesidades.",
             ]}
           />
-          <InitiativeCard
-            accent="/images/shader-1930-02-2.jpg"
+          <AccentTextBlock
             category="Computer Vision"
             title="Detección de plagas en pistachos"
             paragraphs={[
@@ -222,8 +231,7 @@ export default function Home() {
               "El sistema analizaría las imágenes tomadas durante el recorrido y enviaría alertas geolocalizadas al responsable de la producción. Esto ayudaría a localizar posibles problemas sin depender solamente de inspecciones manuales.",
             ]}
           />
-          <InitiativeCard
-            accent="/images/shader-1930-02-2.jpg"
+          <AccentTextBlock
             category="Computer Vision"
             title="Medición de ciclos productivos"
             paragraphs={[
@@ -232,8 +240,7 @@ export default function Home() {
             ]}
           />
           <div className="md:col-span-2">
-            <InitiativeCard
-              accent="/images/shader-1930-32-2.jpg"
+            <AccentTextBlock
               category="Experiencias Inmersivas"
               title="Clones digitales fotorrealistas"
               paragraphs={[
@@ -246,15 +253,15 @@ export default function Home() {
       </section>
 
       {/* Participaciones comerciales */}
-      <section className={`${SECTION} flex flex-col gap-10`}>
-        <div className="flex flex-col gap-6 md:max-w-xl">
+      <section className="flex flex-col gap-10 py-20 md:py-32">
+        <div className="flex flex-col gap-6 px-6 md:max-w-xl md:px-16 lg:px-32">
           <SectionTitle lead="Participaciones" italic="comerciales" />
           <p className="text-base leading-[20px] text-white/90">
             Durante agosto se realizaron cinco reuniones comerciales y demostraciones. Dos de los
             encuentros correspondieron al seguimiento de una misma oportunidad con 360Energy.
           </p>
         </div>
-        <div className="flex flex-col divide-y divide-white/10">
+        <div className="flex flex-col">
           <CommercialEntry
             image="/images/fdq-1.jpg"
             imageAlt="José Cabral"
