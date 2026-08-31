@@ -23,24 +23,18 @@ export function CommercialEntry({
 }: CommercialEntryProps) {
   return (
     <div
-      className={`flex flex-col items-stretch gap-10 py-8 md:gap-16 md:py-12 ${
+      className={`flex flex-col items-stretch gap-10 py-8 md:h-[500px] md:gap-16 md:py-12 ${
         reverse ? "md:flex-row-reverse" : "md:flex-row"
       }`}
     >
-      <div className="relative aspect-[4/3] w-full shrink-0 md:w-1/2">
+      <div className="relative h-[500px] w-full shrink-0 md:h-full md:w-1/2">
         <Image src={image} alt={imageAlt} fill sizes="50vw" className="object-cover" />
         <div
           className="absolute inset-0"
           style={{
-            background: "linear-gradient(to bottom, black, transparent 22%, transparent 78%, black)",
-          }}
-        />
-        <div
-          className="absolute inset-0"
-          style={{
             background: reverse
-              ? "linear-gradient(to right, black, transparent 45%)"
-              : "linear-gradient(to left, black, transparent 45%)",
+              ? "radial-gradient(90% 90% at 100% 50%, transparent 40%, black 100%)"
+              : "radial-gradient(90% 90% at 0% 50%, transparent 40%, black 100%)",
           }}
         />
       </div>

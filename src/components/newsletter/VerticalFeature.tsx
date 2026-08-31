@@ -33,15 +33,9 @@ export function VerticalFeature({
         <div
           className="absolute inset-0"
           style={{
-            background: "linear-gradient(to bottom, black, transparent 22%, transparent 78%, black)",
-          }}
-        />
-        <div
-          className="absolute inset-0"
-          style={{
             background: reverse
-              ? "linear-gradient(to right, black, transparent 45%)"
-              : "linear-gradient(to left, black, transparent 45%)",
+              ? "radial-gradient(90% 90% at 100% 50%, transparent 40%, black 100%)"
+              : "radial-gradient(90% 90% at 0% 50%, transparent 40%, black 100%)",
           }}
         />
       </div>
