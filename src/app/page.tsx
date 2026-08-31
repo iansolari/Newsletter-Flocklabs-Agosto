@@ -14,7 +14,7 @@ export default function Home() {
     <main className="flex flex-col">
       {/* Hero */}
       <section className="relative flex min-h-[80vh] w-full items-end overflow-hidden md:min-h-screen">
-        <HeroBackground src="/images/shader-1930-21-3.png" />
+        <HeroBackground src="/images/hero-bg.jpg" />
         <div className="relative z-10 flex flex-col gap-6 px-6 pb-16 md:px-16 md:pb-24 lg:px-32">
           <div>
             <p className="font-serif text-4xl leading-tight font-light italic md:text-[64px] md:leading-[64px]">
@@ -53,11 +53,11 @@ export default function Home() {
       {/* El mes en breve */}
       <section className="relative w-full overflow-hidden">
         <Image
-          src="/images/shader-1930-21-4.png"
+          src="/images/mes-en-breve-bg.jpg"
           alt=""
           fill
           sizes="100vw"
-          className="object-cover object-bottom opacity-40"
+          className="object-cover"
         />
         <div className="relative z-10 flex flex-col gap-10 px-6 py-12 md:flex-row md:items-center md:justify-between md:px-16 md:py-16 lg:px-32">
           <SectionTitle lead="El mes" italic="en breve" size="large" />
@@ -177,7 +177,7 @@ export default function Home() {
       <section className={`${SECTION} flex flex-col gap-10`}>
         <SectionTitle lead="Compartimos" italic="lo aprendido" />
         <StoryBanner
-          image="/images/shader-1930-02-2.jpg"
+          image="/images/compartimos-bg.jpg"
           imageAlt="Cierre de la POC de mapas de calor"
           category="Transferencia de conocimiento · Computer Vision"
           title="Cierre de la POC de mapas de calor"
@@ -333,8 +333,8 @@ export default function Home() {
 
       {/* Footer */}
       <footer className="flex flex-col items-center gap-6 px-6 py-16 md:px-16">
-        <div className="relative h-8 w-9">
-          <Image src="/images/vector-1.svg" alt="Flock Labs" fill className="object-contain" />
+        <div className="relative h-10 w-12">
+          <Image src="/images/logo.svg" alt="Flock Labs" fill className="object-contain" />
         </div>
         <p className="text-xl text-white/90">I+D Flock Labs / Agosto 2026</p>
       </footer>
