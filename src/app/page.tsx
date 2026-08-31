@@ -187,7 +187,7 @@ export default function Home() {
         <div
           className={`relative z-10 ${SECTION} flex flex-col gap-16 md:flex-row md:items-center md:justify-between`}
         >
-          <SectionTitle lead="Compartimos" italic="lo aprendido" />
+          <SectionTitle lead="Compartimos" italic="lo aprendido" stacked />
           <div className="md:max-w-xl">
             <AccentTextBlock
               category="Computer Vision"

@@ -4,6 +4,8 @@ type SectionTitleProps = {
   italic: string;
   size?: "hero" | "large";
   align?: "left" | "center";
+  /** Force the sans and italic parts onto separate lines instead of wrapping naturally */
+  stacked?: boolean;
 };
 
 export function SectionTitle({
@@ -12,6 +14,7 @@ export function SectionTitle({
   italic,
   size = "hero",
   align = "left",
+  stacked = false,
 }: SectionTitleProps) {
   const sansSize =
     size === "hero"
@@ -29,12 +32,19 @@ export function SectionTitle({
           {eyebrow}
         </p>
       )}
-      <p className={`font-sans font-medium tracking-[-0.03em] ${sansSize}`}>
-        {lead}{" "}
-        <span className={`font-serif font-light italic ${serifSize}`}>
-          {italic}
-        </span>
-      </p>
+      {stacked ? (
+        <>
+          <p className={`font-sans font-medium tracking-[-0.03em] ${sansSize}`}>{lead}</p>
+          <p className={`font-serif font-light italic ${serifSize}`}>{italic}</p>
+        </>
+      ) : (
+        <p className={`font-sans font-medium tracking-[-0.03em] ${sansSize}`}>
+          {lead}{" "}
+          <span className={`font-serif font-light italic ${serifSize}`}>
+            {italic}
+          </span>
+        </p>
+      )}
     </div>
   );
 }

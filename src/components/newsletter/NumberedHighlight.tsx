@@ -6,7 +6,7 @@ type NumberedHighlightProps = {
 
 export function NumberedHighlight({ number, title, body }: NumberedHighlightProps) {
   return (
-    <div className="flex items-start gap-6 border-t border-white/10 pt-8 first:border-t-0 first:pt-0">
+    <div className="flex items-center gap-6">
       <span className="w-16 shrink-0 font-serif text-[56px] leading-[48px] font-light italic text-white md:w-20 md:text-[72px] md:leading-[56px]">
         {number}
       </span>
