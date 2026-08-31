@@ -7,13 +7,13 @@ import { InitiativeCard } from "@/components/newsletter/InitiativeCard";
 import { CommercialEntry } from "@/components/newsletter/CommercialEntry";
 import { HeroBackground } from "@/components/newsletter/HeroBackground";
 
-const SECTION = "px-6 py-20 md:px-16 md:py-32 lg:px-32";
+const SECTION = "snap-start px-6 py-20 md:px-16 md:py-32 lg:px-32";
 
 export default function Home() {
   return (
     <main className="flex flex-col">
       {/* Hero */}
-      <section className="relative flex min-h-[80vh] w-full items-end overflow-hidden md:min-h-screen">
+      <section className="relative flex min-h-[80vh] w-full snap-start items-end overflow-hidden md:min-h-screen">
         <HeroBackground src="/images/hero-bg.jpg" />
         <div className="relative z-10 flex flex-col gap-6 px-6 pb-16 md:px-16 md:pb-24 lg:px-32">
           <div>
@@ -51,7 +51,7 @@ export default function Home() {
       </section>
 
       {/* El mes en breve */}
-      <section className="relative w-full overflow-hidden">
+      <section className="relative w-full snap-start overflow-hidden">
         <Image
           src="/images/mes-en-breve-bg.jpg"
           alt=""
@@ -70,7 +70,7 @@ export default function Home() {
       </section>
 
       {/* Participamos en Expo Industrias */}
-      <section className="relative w-full overflow-hidden">
+      <section className="relative w-full snap-start overflow-hidden">
         <Image
           src="/images/print-halftone33-1.jpg"
           alt=""
@@ -332,7 +332,7 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="flex flex-col items-center gap-6 px-6 py-16 md:px-16">
+      <footer className="snap-start flex flex-col items-center gap-6 px-6 py-16 md:px-16">
         <div className="relative h-10 w-12">
           <Image src="/images/logo.svg" alt="Flock Labs" fill className="object-contain" />
         </div>
