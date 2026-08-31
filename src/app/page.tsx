@@ -33,9 +33,9 @@ export default function Home() {
 
       {/* Lo más destacado */}
       <section className={SECTION}>
-        <div className="flex flex-col gap-8 md:flex-row md:justify-between">
+        <div className="flex max-w-xl flex-col gap-4">
           <SectionTitle eyebrow="Agosto 2026 en i+d" lead="Lo más" italic="destacado" />
-          <div className="flex max-w-md flex-col gap-4 text-base leading-[20px] text-white/90">
+          <div className="flex flex-col gap-4 text-base leading-[20px] text-white/90">
             <p>
               Durante agosto finalizamos dos iniciativas de investigación y presentamos seis
               nuevas propuestas vinculadas con Robótica, Agentes, Computer Vision y Experiencias
@@ -59,7 +59,7 @@ export default function Home() {
           sizes="100vw"
           className="object-cover object-bottom opacity-40"
         />
-        <div className="relative z-10 flex flex-col gap-10 px-6 py-20 md:px-16 md:py-32 lg:px-32">
+        <div className="relative z-10 flex flex-col gap-10 px-6 py-12 md:flex-row md:items-center md:justify-between md:px-16 md:py-16 lg:px-32">
           <SectionTitle lead="El mes" italic="en breve" size="large" />
           <div className="flex flex-wrap gap-12 md:gap-20">
             <StatItem value="2" label="Iniciativas finalizadas" />
