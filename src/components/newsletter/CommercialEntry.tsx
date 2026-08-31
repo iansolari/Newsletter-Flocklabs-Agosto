@@ -32,9 +32,16 @@ export function CommercialEntry({
         <div
           className="absolute inset-0"
           style={{
+            background:
+              "linear-gradient(to bottom, black 0%, transparent 35%, transparent 65%, black 100%)",
+          }}
+        />
+        <div
+          className="absolute inset-0"
+          style={{
             background: reverse
-              ? "radial-gradient(ellipse 130% 70% at 100% 50%, transparent 45%, black 100%)"
-              : "radial-gradient(ellipse 130% 70% at 0% 50%, transparent 45%, black 100%)",
+              ? "linear-gradient(to right, black 0%, transparent 55%)"
+              : "linear-gradient(to left, black 0%, transparent 55%)",
           }}
         />
       </div>
