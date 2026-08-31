@@ -33,7 +33,7 @@ export default function Home() {
 
       {/* Lo más destacado */}
       <section className={SECTION}>
-        <div className="flex max-w-xl flex-col gap-4">
+        <div className="flex w-[500px] max-w-full flex-col gap-4">
           <SectionTitle eyebrow="Agosto 2026 en i+d" lead="Lo más" italic="destacado" />
           <div className="flex flex-col gap-4 text-base leading-[20px] text-white/90">
             <p>
@@ -133,18 +133,20 @@ export default function Home() {
 
       {/* Iniciativas finalizadas */}
       <section className="flex flex-col gap-16 py-20 md:py-32">
-        <div className="flex flex-col gap-6 px-6 md:max-w-xl md:px-16 lg:px-32">
-          <SectionTitle lead="Iniciativas" italic="finalizadas" />
-          <div className="flex flex-col gap-4 text-base leading-[20px] text-white/90">
-            <p>
-              Durante agosto concluyeron dos investigaciones relacionadas con experiencias
-              inmersivas y robótica.
-            </p>
-            <p>
-              La información disponible permite explicar el problema y el objetivo de cada
-              trabajo. Sus resultados y conclusiones deberán incorporarse antes de publicar esta
-              edición.
-            </p>
+        <div className="px-6 md:px-16 lg:px-32">
+          <div className="flex w-[500px] max-w-full flex-col gap-6">
+            <SectionTitle lead="Iniciativas" italic="finalizadas" />
+            <div className="flex flex-col gap-4 text-base leading-[20px] text-white/90">
+              <p>
+                Durante agosto concluyeron dos investigaciones relacionadas con experiencias
+                inmersivas y robótica.
+              </p>
+              <p>
+                La información disponible permite explicar el problema y el objetivo de cada
+                trabajo. Sus resultados y conclusiones deberán incorporarse antes de publicar esta
+                edición.
+              </p>
+            </div>
           </div>
         </div>
         <div className="flex flex-col gap-16">
@@ -184,10 +186,12 @@ export default function Home() {
           className="object-cover"
         />
         <div
-          className={`relative z-10 ${SECTION} flex flex-col gap-16 md:flex-row md:items-center md:justify-between`}
+          className={`relative z-10 ${SECTION} flex flex-col gap-16 md:flex-row md:items-center`}
         >
-          <SectionTitle lead="Compartimos" italic="lo aprendido" stacked />
-          <div className="md:max-w-xl">
+          <div className="md:w-1/2">
+            <SectionTitle lead="Compartimos" italic="lo aprendido" stacked />
+          </div>
+          <div className="md:w-1/2">
             <AccentTextBlock
               category="Computer Vision"
               label="Transferencia de conocimiento · Computer Vision"
@@ -253,12 +257,15 @@ export default function Home() {
 
       {/* Participaciones comerciales */}
       <section className="flex flex-col gap-10 py-20 md:py-32">
-        <div className="flex flex-col gap-6 px-6 md:max-w-xl md:px-16 lg:px-32">
-          <SectionTitle lead="Participaciones" italic="comerciales" />
-          <p className="text-base leading-[20px] text-white/90">
-            Durante agosto se realizaron cinco reuniones comerciales y demostraciones. Dos de los
-            encuentros correspondieron al seguimiento de una misma oportunidad con 360Energy.
-          </p>
+        <div className="px-6 md:px-16 lg:px-32">
+          <div className="flex w-[500px] max-w-full flex-col gap-6">
+            <SectionTitle lead="Participaciones" italic="comerciales" />
+            <p className="text-base leading-[20px] text-white/90">
+              Durante agosto se realizaron cinco reuniones comerciales y demostraciones. Dos de
+              los encuentros correspondieron al seguimiento de una misma oportunidad con
+              360Energy.
+            </p>
+          </div>
         </div>
         <div className="flex flex-col">
           <CommercialEntry
