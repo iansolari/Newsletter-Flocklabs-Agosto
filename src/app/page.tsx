@@ -186,8 +186,13 @@ export default function Home() {
           className="object-cover"
         />
         <div
-          className={`relative z-10 ${SECTION} flex flex-col gap-16 md:flex-row md:items-center`}
-        >
+          className="absolute inset-0"
+          style={{
+            background:
+              "linear-gradient(to bottom, black, transparent 25%, transparent 75%, black)",
+          }}
+        />
+        <div className="relative z-10 flex flex-col gap-16 px-6 py-40 md:flex-row md:items-center md:px-16 md:py-64 lg:px-32">
           <div className="md:w-1/2">
             <SectionTitle lead="Compartimos" italic="lo aprendido" stacked />
           </div>
