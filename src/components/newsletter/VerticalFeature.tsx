@@ -34,8 +34,8 @@ export function VerticalFeature({
           className="absolute inset-0"
           style={{
             background: reverse
-              ? "radial-gradient(ellipse 75% 45% at 100% 50%, transparent 25%, black 100%)"
-              : "radial-gradient(ellipse 75% 45% at 0% 50%, transparent 25%, black 100%)",
+              ? "radial-gradient(ellipse 140% 45% at 100% 50%, transparent 25%, black 100%)"
+              : "radial-gradient(ellipse 140% 45% at 0% 50%, transparent 25%, black 100%)",
           }}
         />
       </div>
