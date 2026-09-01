@@ -78,7 +78,7 @@ export default function Home() {
           fill
           sizes="100vw"
           quality={90}
-          className="object-cover object-[center_30%] opacity-70"
+          className="object-cover object-[center_30%] opacity-15"
         />
         <div
           className="absolute inset-0"
