@@ -29,7 +29,7 @@ export function VerticalFeature({
       }`}
     >
       <div className="relative aspect-[4/3] w-full shrink-0 md:w-1/2">
-        <Image src={image} alt={imageAlt} fill sizes="50vw" className="object-cover" />
+        <Image src={image} alt={imageAlt} fill sizes="50vw" quality={90} className="object-cover" />
         <div
           className="absolute inset-0"
           style={{

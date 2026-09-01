@@ -28,7 +28,7 @@ export function CommercialEntry({
       }`}
     >
       <div className="relative h-[500px] w-full shrink-0 md:h-full md:w-1/2">
-        <Image src={image} alt={imageAlt} fill sizes="50vw" className="object-cover" />
+        <Image src={image} alt={imageAlt} fill sizes="50vw" quality={90} className="object-cover" />
         <div
           className="absolute inset-0"
           style={{

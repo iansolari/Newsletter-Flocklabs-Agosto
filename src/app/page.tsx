@@ -57,6 +57,7 @@ export default function Home() {
           alt=""
           fill
           sizes="100vw"
+          quality={90}
           className="object-cover"
         />
         <div className="relative z-10 flex flex-col gap-10 px-6 py-12 md:flex-row md:items-center md:justify-between md:px-16 md:py-16 lg:px-32">
@@ -72,10 +73,11 @@ export default function Home() {
       {/* Participamos en Expo Industrias */}
       <section className="relative w-full overflow-hidden">
         <Image
-          src="/images/print-halftone33-1.jpg"
+          src="/images/expo-industrias-bg.jpg"
           alt=""
           fill
           sizes="100vw"
+          quality={90}
           className="object-cover opacity-50"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-black/30" />
@@ -151,7 +153,7 @@ export default function Home() {
         </div>
         <div className="flex flex-col gap-16">
           <VerticalFeature
-            image="/images/print-halftone-2.jpg"
+            image="/images/iniciativa-avatar-unreal-engine.jpg"
             imageAlt="Avatar con Unreal Engine"
             category="Experiencias Inmersivas"
             title="Avatar con Unreal Engine"
@@ -163,7 +165,7 @@ export default function Home() {
             ]}
           />
           <VerticalFeature
-            image="/images/print-halftone2-1.jpg"
+            image="/images/iniciativa-navegacion-cuadrupedo.jpg"
             imageAlt="Navegación simulada de cuadrúpedo"
             category="Robótica"
             title="Navegación simulada de cuadrúpedo"
@@ -183,6 +185,7 @@ export default function Home() {
           alt=""
           fill
           sizes="100vw"
+          quality={90}
           className="object-cover"
         />
         <div
@@ -272,7 +275,7 @@ export default function Home() {
         </div>
         <div className="flex flex-col">
           <CommercialEntry
-            image="/images/fdq-1.jpg"
+            image="/images/comercial-jose-cabral.jpg"
             imageAlt="José Cabral"
             category="Computer Vision"
             title="José Cabral"
@@ -283,7 +286,7 @@ export default function Home() {
             ]}
           />
           <CommercialEntry
-            image="/images/cvv-1.jpg"
+            image="/images/comercial-pallets-marcel.jpg"
             imageAlt="Pallets Marcel"
             category="Computer Vision y Robótica"
             title="Pallets Marcel"
@@ -294,7 +297,7 @@ export default function Home() {
             ]}
           />
           <CommercialEntry
-            image="/images/gdfgs-1.jpg"
+            image="/images/comercial-360energy.jpg"
             imageAlt="360Energy"
             category="Producto"
             title="360Energy"
@@ -306,7 +309,7 @@ export default function Home() {
             ]}
           />
           <CommercialEntry
-            image="/images/fvw23-1.jpg"
+            image="/images/comercial-farmacity.jpg"
             imageAlt="Farmacity"
             category="Agentes"
             title="Farmacity"
@@ -320,13 +323,13 @@ export default function Home() {
 
       {/* Seguimos compartiendo nuestros avances */}
       <section className={`${SECTION} flex flex-col items-center gap-12 md:flex-row md:justify-between`}>
-        <div className="relative aspect-square w-48 shrink-0 overflow-hidden rounded-full md:w-64">
+        <div className="relative aspect-square w-48 shrink-0 md:w-64">
           <Image
-            src="/images/shader-1930-21-7.jpg"
+            src="/images/footer-mark.png"
             alt=""
             fill
             sizes="256px"
-            className="object-cover"
+            className="object-contain"
           />
         </div>
         <div className="flex flex-col gap-6 text-center md:max-w-xl md:text-left">
@@ -352,7 +355,13 @@ export default function Home() {
       {/* Footer */}
       <footer className="flex flex-col items-center gap-6 px-6 py-16 md:px-16">
         <div className="relative h-10 w-12">
-          <Image src="/images/logo.svg" alt="Flock Labs" fill className="object-contain" />
+          <Image
+            src="/images/logo.svg"
+            alt="Flock Labs"
+            fill
+            sizes="48px"
+            className="object-contain"
+          />
         </div>
         <p className="text-xl text-white/90">I+D Flock Labs / Agosto 2026</p>
       </footer>
