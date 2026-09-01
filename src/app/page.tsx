@@ -78,9 +78,9 @@ export default function Home() {
           fill
           sizes="100vw"
           quality={90}
-          className="object-cover opacity-50"
+          className="object-cover object-top opacity-70"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-black/30" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black via-black/40 to-black/20" />
         <div className={`relative z-10 ${SECTION} flex flex-col gap-10`}>
           <SectionTitle lead="Participamos en" italic="expo Industrias" />
           <div className="flex max-w-3xl flex-col gap-4 text-base leading-[20px] text-white/90">
