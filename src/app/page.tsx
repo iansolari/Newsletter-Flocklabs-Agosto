@@ -334,19 +334,20 @@ export default function Home() {
         <div className="relative aspect-square w-48 shrink-0 md:w-64">
           <Image
             src="/images/footer-mark.png"
-            alt=""
+            alt="Flock Labs"
             fill
             sizes="256px"
+            quality={90}
             className="object-contain"
           />
         </div>
         <div className="flex flex-col gap-6 text-center md:max-w-xl md:text-left">
-          <p className="font-sans text-4xl leading-tight font-medium tracking-[-0.03em] md:text-[64px] md:leading-[68px]">
+          <h2 className="font-sans text-4xl leading-tight font-medium tracking-[-0.03em] md:text-[64px] md:leading-[68px]">
             Seguimos compartiendo{" "}
             <span className="font-serif text-[1.1em] leading-tight font-light italic">
               nuestros avances
             </span>
-          </p>
+          </h2>
           <div className="flex flex-col gap-3 text-base leading-[20px] text-white/90">
             <p>
               Este newsletter reúne una selección de las actividades más relevantes del equipo

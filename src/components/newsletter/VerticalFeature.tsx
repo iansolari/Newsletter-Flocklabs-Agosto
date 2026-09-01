@@ -1,5 +1,5 @@
-import Image from "next/image";
 import { AccentTextBlock } from "./AccentTextBlock";
+import { GradientPhoto } from "./GradientPhoto";
 
 const GUTTER_LEFT = "pl-6 md:pl-16 lg:pl-32";
 const GUTTER_RIGHT = "pr-6 md:pr-16 lg:pr-32";
@@ -28,24 +28,12 @@ export function VerticalFeature({
         reverse ? "md:flex-row-reverse" : "md:flex-row"
       }`}
     >
-      <div className="relative aspect-[4/3] w-full shrink-0 md:w-1/2">
-        <Image src={image} alt={imageAlt} fill sizes="50vw" quality={90} className="object-cover" />
-        <div
-          className="absolute inset-0"
-          style={{
-            background:
-              "linear-gradient(to bottom, black 0%, transparent 35%, transparent 65%, black 100%)",
-          }}
-        />
-        <div
-          className="absolute inset-0"
-          style={{
-            background: reverse
-              ? "linear-gradient(to right, black 0%, transparent 55%)"
-              : "linear-gradient(to left, black 0%, transparent 55%)",
-          }}
-        />
-      </div>
+      <GradientPhoto
+        image={image}
+        imageAlt={imageAlt}
+        reverse={reverse}
+        className="relative aspect-[4/3] w-full shrink-0 md:w-1/2"
+      />
       <div
         className={`flex flex-1 items-center ${reverse ? GUTTER_LEFT : GUTTER_RIGHT}`}
       >

@@ -1,4 +1,5 @@
-import Image from "next/image";
+import { AccentTextBlock } from "./AccentTextBlock";
+import { GradientPhoto } from "./GradientPhoto";
 
 const GUTTER_LEFT = "pl-6 md:pl-16 lg:pl-32";
 const GUTTER_RIGHT = "pr-6 md:pr-16 lg:pr-32";
@@ -27,38 +28,16 @@ export function CommercialEntry({
         reverse ? "md:flex-row-reverse" : "md:flex-row"
       }`}
     >
-      <div className="relative h-[500px] w-full shrink-0 md:h-full md:w-1/2">
-        <Image src={image} alt={imageAlt} fill sizes="50vw" quality={90} className="object-cover" />
-        <div
-          className="absolute inset-0"
-          style={{
-            background:
-              "linear-gradient(to bottom, black 0%, transparent 35%, transparent 65%, black 100%)",
-          }}
-        />
-        <div
-          className="absolute inset-0"
-          style={{
-            background: reverse
-              ? "linear-gradient(to right, black 0%, transparent 55%)"
-              : "linear-gradient(to left, black 0%, transparent 55%)",
-          }}
-        />
-      </div>
+      <GradientPhoto
+        image={image}
+        imageAlt={imageAlt}
+        reverse={reverse}
+        className="relative h-[500px] w-full shrink-0 md:h-full md:w-1/2"
+      />
       <div
-        className={`flex flex-1 flex-col justify-center gap-3 ${reverse ? GUTTER_LEFT : GUTTER_RIGHT}`}
+        className={`flex flex-1 items-center ${reverse ? GUTTER_LEFT : GUTTER_RIGHT}`}
       >
-        <div className="flex flex-col gap-2">
-          <p className="text-sm tracking-[0.12em] text-text-secondary uppercase">{category}</p>
-          <h3 className="text-2xl font-medium tracking-[-0.02em] md:text-[40px] md:leading-[44px]">
-            {title}
-          </h3>
-        </div>
-        <div className="flex flex-col gap-3 text-base leading-[20px] text-white/90">
-          {paragraphs.map((p, i) => (
-            <p key={i}>{p}</p>
-          ))}
-        </div>
+        <AccentTextBlock category={category} title={title} paragraphs={paragraphs} hideAccent />
       </div>
     </div>
   );

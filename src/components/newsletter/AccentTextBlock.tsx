@@ -7,10 +7,18 @@ type AccentTextBlockProps = {
   label?: string;
   title: string;
   paragraphs: string[];
+  /** Omit the color accent bar even when the category has one mapped */
+  hideAccent?: boolean;
 };
 
-export function AccentTextBlock({ category, label, title, paragraphs }: AccentTextBlockProps) {
-  const accent = CATEGORY_ACCENT_IMAGE[category];
+export function AccentTextBlock({
+  category,
+  label,
+  title,
+  paragraphs,
+  hideAccent = false,
+}: AccentTextBlockProps) {
+  const accent = !hideAccent && CATEGORY_ACCENT_IMAGE[category];
 
   return (
     <div className="flex gap-4">
