@@ -184,7 +184,7 @@ export default function Home() {
           src="/images/compartimos-bg.jpg"
           alt=""
           fill
-          sizes="100vw"
+          sizes="min(100vw, 2885px)"
           quality={90}
           className="object-cover"
         />
