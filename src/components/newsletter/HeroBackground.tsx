@@ -33,7 +33,7 @@ export function HeroBackground({ src }: HeroBackgroundProps) {
   return (
     <div ref={containerRef} className="pointer-events-none absolute inset-0" style={{ opacity }}>
       <Image src={src} alt="" fill priority sizes="100vw" className="object-cover" />
-      <div className="absolute inset-0 bg-gradient-to-t from-black via-black/10 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black" />
     </div>
   );
 }
