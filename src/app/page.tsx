@@ -322,7 +322,7 @@ export default function Home() {
       </section>
 
       {/* Seguimos compartiendo nuestros avances */}
-      <section className={`${SECTION} flex flex-col items-center gap-12 md:flex-row md:justify-center`}>
+      <section className={`${SECTION} flex flex-col items-center gap-12 md:flex-row md:justify-center md:gap-24`}>
         <div className="relative aspect-square w-48 shrink-0 md:w-64">
           <Image
             src="/images/footer-mark.png"
