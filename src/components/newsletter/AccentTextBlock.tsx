@@ -16,7 +16,7 @@ export function AccentTextBlock({ category, label, title, paragraphs }: AccentTe
     <div className="flex gap-4">
       {accent && (
         <div className="relative w-[70px] shrink-0 self-stretch overflow-hidden">
-          <Image src={accent} alt="" fill sizes="70px" className="object-cover" />
+          <Image src={accent} alt="" fill sizes="70px" quality={90} className="object-cover" />
         </div>
       )}
       <div className="flex flex-col gap-3">
