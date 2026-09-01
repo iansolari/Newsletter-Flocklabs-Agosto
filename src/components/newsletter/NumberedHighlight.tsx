@@ -11,9 +11,9 @@ export function NumberedHighlight({ number, title, body }: NumberedHighlightProp
         {number}
       </span>
       <div className="flex flex-col gap-2">
-        <h3 className="text-xl font-medium tracking-[-0.02em] md:text-[32px] md:leading-[36px]">
+        <h4 className="text-xl font-medium tracking-[-0.02em] md:text-[32px] md:leading-[36px]">
           {title}
-        </h3>
+        </h4>
         <p className="max-w-3xl text-base leading-[20px] text-white/90">{body}</p>
       </div>
     </div>

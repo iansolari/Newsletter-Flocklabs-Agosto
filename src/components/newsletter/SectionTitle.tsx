@@ -33,17 +33,19 @@ export function SectionTitle({
         </p>
       )}
       {stacked ? (
-        <>
-          <p className={`font-sans font-medium tracking-[-0.03em] ${sansSize}`}>{lead}</p>
-          <p className={`font-serif font-light italic ${serifSize}`}>{italic}</p>
-        </>
+        <h2>
+          <span className={`block font-sans font-medium tracking-[-0.03em] ${sansSize}`}>
+            {lead}
+          </span>
+          <span className={`block font-serif font-light italic ${serifSize}`}>{italic}</span>
+        </h2>
       ) : (
-        <p className={`font-sans font-medium tracking-[-0.03em] ${sansSize}`}>
+        <h2 className={`font-sans font-medium tracking-[-0.03em] ${sansSize}`}>
           {lead}{" "}
           <span className={`font-serif font-light italic ${serifSize}`}>
             {italic}
           </span>
-        </p>
+        </h2>
       )}
     </div>
   );

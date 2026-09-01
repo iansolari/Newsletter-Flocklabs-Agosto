@@ -106,12 +106,14 @@ export default function Home() {
               tomar, quién es responsable del proceso y qué controles deben acompañar su
               funcionamiento.
             </p>
-            <p>Estos fueron los 5 ejes centrales de la charla:</p>
           </div>
         </div>
       </section>
 
       <section className={`${SECTION} flex flex-col gap-10`}>
+        <h3 className="text-2xl font-medium tracking-[-0.02em] md:text-[40px] md:leading-[44px]">
+          Estos fueron los 5 ejes centrales de la charla:
+        </h3>
         <NumberedHighlight
           number={1}
           title="Usar IA no equivale a delegarle una operación"
