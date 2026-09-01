@@ -78,7 +78,7 @@ export default function Home() {
           fill
           sizes="100vw"
           quality={90}
-          className="object-cover object-[center_30%] opacity-15"
+          className="object-cover object-[center_30%] opacity-50"
         />
         <div
           className="absolute inset-0"
@@ -88,7 +88,7 @@ export default function Home() {
           }}
         />
         <div className={`relative z-10 ${SECTION} flex flex-col gap-10`}>
-          <SectionTitle lead="Participamos en" italic="expo Industrias" />
+          <SectionTitle lead="Participamos en" italic="expo Industrias" stacked />
           <div className="flex max-w-3xl flex-col gap-4 text-base leading-[20px] text-white/90">
             <p>
               El equipo participó en Expo Industrias y Servicios con la disertación “Cuando la IA
